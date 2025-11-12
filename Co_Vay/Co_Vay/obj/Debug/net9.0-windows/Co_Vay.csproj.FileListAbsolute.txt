@@ -26,3 +26,12 @@ C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\bin\
 C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\bin\Debug\net9.0-windows\System.Reactive.dll
 C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\obj\Debug\net9.0-windows\Co_Vay.Man_Hinh_Chinh.resources
 C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\obj\Debug\net9.0-windows\Co_Vay.Quen_Mat_Khau.resources
+C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\obj\Debug\net9.0-windows\Co_Vay.Profile.resources
+C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\obj\Debug\net9.0-windows\Co_Vay.Change_Password.resources
+C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\obj\Debug\net9.0-windows\Co_Vay.Change_Email.resources
+C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\obj\Debug\net9.0-windows\Co_Vay.PasswordPrompt.resources
+C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\bin\Debug\net9.0-windows\System.IO.Pipelines.dll
+C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\bin\Debug\net9.0-windows\System.Text.Encodings.Web.dll
+C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\bin\Debug\net9.0-windows\System.Text.Json.dll
+C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\bin\Debug\net9.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\duyph\OneDrive\Tài liệu\UIT\HK3\NT106.Q11\Do_An\Co_Vay\Co_Vay\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\System.Text.Encodings.Web.dll

@@ -46,6 +46,7 @@
             pictureBox1.Size = new Size(1536, 1006);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // btn_Play
             // 
@@ -68,7 +69,6 @@
             btn_Rankings.Size = new Size(705, 220);
             btn_Rankings.TabIndex = 2;
             btn_Rankings.UseVisualStyleBackColor = true;
-            btn_Rankings.Click += btn_Rankings_Click;
             // 
             // btn_History
             // 
@@ -102,6 +102,7 @@
             btn_Rewards.Size = new Size(268, 222);
             btn_Rewards.TabIndex = 5;
             btn_Rewards.UseVisualStyleBackColor = true;
+            btn_Rewards.Click += btn_Rewards_Click;
             // 
             // btn_Profile
             // 
@@ -113,6 +114,7 @@
             btn_Profile.Size = new Size(301, 265);
             btn_Profile.TabIndex = 6;
             btn_Profile.UseVisualStyleBackColor = true;
+            btn_Profile.Click += btn_Profile_Click;
             // 
             // Man_Hinh_Chinh
             // 
@@ -128,7 +130,6 @@
             Controls.Add(pictureBox1);
             Name = "Man_Hinh_Chinh";
             Text = "Man_Hinh_Chinh";
-            Load += Man_Hinh_Chinh_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

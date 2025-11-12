@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Firebase.Auth;
 
 namespace Co_Vay
 {
     public partial class Dang_Nhap : Form
     {
         private Trang_Chu trangChuForm;
+
         public Dang_Nhap(Trang_Chu formTrangChu)
         {
             InitializeComponent();
@@ -21,61 +16,85 @@ namespace Co_Vay
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
+            // 🔹 Quay lại trang chủ
             this.Close();
             trangChuForm.Show();
         }
 
         private async void btn_DangNhap2_Click(object sender, EventArgs e)
         {
-            string username = txb_Username.Text.Trim();
-            string password = txb_Password.Text.Trim();
+            string username = txb_Username.Text.Trim();  // 🔹 Lấy username người dùng nhập
+            string password = txb_Password.Text.Trim();  // 🔹 Lấy mật khẩu người dùng nhập
 
+            // 🔹 Kiểm tra ô nhập trống
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Vui lòng nhập tên đăng nhập và mật khẩu!");
+                MessageBox.Show("Please enter both username and password!",
+                                "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                // B1: Lấy email theo username từ Realtime Database
+                // 🔹 Lấy email tương ứng với username trong Realtime Database
                 var db = new RealtimeDatabaseService();
                 string email = await db.GetEmailByUsernameAsync(username);
 
                 if (string.IsNullOrEmpty(email))
                 {
-                    MessageBox.Show("Tên đăng nhập không tồn tại!");
+                    MessageBox.Show("Username does not exist!",
+                                    "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                // B2: Đăng nhập Firebase
+                // 🔹 Đăng nhập Firebase bằng email và mật khẩu
                 var firebase = new FirebaseService();
                 var auth = await firebase.LoginAsync(email, password);
 
-                MessageBox.Show("Đăng nhập thành công!");
+                // 🔹 Kiểm tra xem email đã được xác minh hay chưa
+                if (!auth.User.Info.IsEmailVerified)
+                {
+                    MessageBox.Show("Your email address is not verified yet! Please check your inbox and verify it before logging in.",
+                                    "Email Not Verified", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-                // B3: Mở form chính
-                Man_Hinh_Chinh mainForm = new Man_Hinh_Chinh();
+                // 🔹 Đăng nhập thành công
+                MessageBox.Show("✅ Login successful!",
+                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // 🔹 Mở màn hình chính sau khi đăng nhập thành công
+                Man_Hinh_Chinh mainForm = new Man_Hinh_Chinh(firebase.AuthClient);
                 mainForm.Show();
 
-                // Đóng form đăng nhập
+                // 🔹 Ẩn form đăng nhập để không bị chồng lên
                 this.Hide();
-                this.Dispose();
             }
             catch (Firebase.Auth.FirebaseAuthException)
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu!");
+                // 🔹 Lỗi đăng nhập Firebase (sai mật khẩu hoặc tài khoản không tồn tại)
+                MessageBox.Show("Incorrect username or password!",
+                                "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi đăng nhập: " + ex.Message);
+                // 🔹 Các lỗi khác (mất mạng, Firebase lỗi, v.v.)
+                MessageBox.Show("Login error: " + ex.Message,
+                                "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btn_Quen_mat_khau_Click(object sender, EventArgs e)
         {
-            Quen_Mat_Khau f= new Quen_Mat_Khau(this);
+            // 🔹 Mở form quên mật khẩu và ẩn form đăng nhập
+            Quen_Mat_Khau f = new Quen_Mat_Khau(this);
             f.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // 🔹 Sự kiện click hình ảnh (nếu cần dùng sau)
         }
     }
 }
