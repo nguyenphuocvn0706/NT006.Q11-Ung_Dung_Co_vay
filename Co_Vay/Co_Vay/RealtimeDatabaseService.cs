@@ -1,8 +1,5 @@
-﻿using System.Net.Http;
-using System.Text;
+﻿using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace Co_Vay
 {
@@ -11,6 +8,7 @@ namespace Co_Vay
         private readonly string baseUrl = "https://covay-54c65-default-rtdb.firebaseio.com/";
         private readonly string idToken;
         private readonly HttpClient client = new HttpClient();
+        private readonly string databaseUrl = "https://covay-54c65-default-rtdb.firebaseio.com";
 
         public RealtimeDatabaseService(string idToken = null)
         {
@@ -42,14 +40,47 @@ namespace Co_Vay
                 return JsonSerializer.Deserialize<string>(text);
             return null;
         }
+        public async Task<UserModel> GetUserAsync(string uid)
+        {
+            var res = await client.GetAsync(AuthUrl($"users/{uid}"));
+            var text = await res.Content.ReadAsStringAsync();
+            if (res.IsSuccessStatusCode && text != "null")
+                return JsonSerializer.Deserialize<UserModel>(text);
+            return null;
+        }
+        public async Task DeleteUserAsync(string uid)
+        {
+            using (var client = new HttpClient())
+            {
+                string url = $"{baseUrl}/users/{uid}.json?auth={idToken}";
+                var response = await client.DeleteAsync(url);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    string error = await response.Content.ReadAsStringAsync();
+                    throw new Exception("Unable to delete user data: " + error);
+                }
+            }
+        }
+        public async Task DeleteUsernameMappingAsync(string username)
+        {
+            var url = $"{databaseUrl}/usernames/{username}.json?auth={idToken}";
+            using (var client = new HttpClient())
+            {
+                var response = await client.DeleteAsync(url);
+                response.EnsureSuccessStatusCode();
+            }
+        }
+
+
     }
 
     internal class UserModel
     {
         public string username { get; set; }
         public string email { get; set; }
-        public int rank { get; set; } = 1;
-        public int wins { get; set; } = 0;
-        public int losses { get; set; } = 0;
+        public string name { get; set; }
+        public string sex { get; set; }
+        public string dob { get; set; }
     }
 }
