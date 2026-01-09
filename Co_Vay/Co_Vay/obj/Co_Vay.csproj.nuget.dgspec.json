@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\duyph\\OneDrive\\Tài liệu\\UIT\\HK3\\NT106.Q11\\Do_An\\Co_Vay\\Co_Vay\\Co_Vay.csproj": {}
+    "C:\\Users\\nguye\\Documents\\UIT\\NT106.Q11\\Co_Vay\\Co_Vay\\Co_Vay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\duyph\\OneDrive\\Tài liệu\\UIT\\HK3\\NT106.Q11\\Do_An\\Co_Vay\\Co_Vay\\Co_Vay.csproj": {
+    "C:\\Users\\nguye\\Documents\\UIT\\NT106.Q11\\Co_Vay\\Co_Vay\\Co_Vay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\duyph\\OneDrive\\Tài liệu\\UIT\\HK3\\NT106.Q11\\Do_An\\Co_Vay\\Co_Vay\\Co_Vay.csproj",
+        "projectUniqueName": "C:\\Users\\nguye\\Documents\\UIT\\NT106.Q11\\Co_Vay\\Co_Vay\\Co_Vay.csproj",
         "projectName": "Co_Vay",
-        "projectPath": "C:\\Users\\duyph\\OneDrive\\Tài liệu\\UIT\\HK3\\NT106.Q11\\Do_An\\Co_Vay\\Co_Vay\\Co_Vay.csproj",
-        "packagesPath": "C:\\Users\\duyph\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\duyph\\OneDrive\\Tài liệu\\UIT\\HK3\\NT106.Q11\\Do_An\\Co_Vay\\Co_Vay\\obj\\",
+        "projectPath": "C:\\Users\\nguye\\Documents\\UIT\\NT106.Q11\\Co_Vay\\Co_Vay\\Co_Vay.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nguye\\Documents\\UIT\\NT106.Q11\\Co_Vay\\Co_Vay\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\duyph\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0-windows7.0": {
@@ -74,6 +70,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -82,7 +96,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
