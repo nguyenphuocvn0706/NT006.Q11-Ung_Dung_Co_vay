@@ -73,9 +73,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Desktop___2__4_ {
+        internal static System.Drawing.Bitmap BACK_RANKS {
             get {
-                object obj = ResourceManager.GetObject("Desktop - 2 (4)", resourceCulture);
+                object obj = ResourceManager.GetObject("BACK_RANKS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap HISTORY {
+        internal static System.Drawing.Bitmap Change_Email {
             get {
-                object obj = ResourceManager.GetObject("HISTORY", resourceCulture);
+                object obj = ResourceManager.GetObject("Change_Email", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Man_Hinh_Chinh {
+        internal static System.Drawing.Bitmap Change_Email1 {
             get {
-                object obj = ResourceManager.GetObject("Man_Hinh_Chinh", resourceCulture);
+                object obj = ResourceManager.GetObject("Change_Email1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Nen {
+        internal static System.Drawing.Bitmap Change_Pass {
             get {
-                object obj = ResourceManager.GetObject("Nen", resourceCulture);
+                object obj = ResourceManager.GetObject("Change_Pass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Nen1 {
+        internal static System.Drawing.Bitmap Dang_Nhap {
             get {
-                object obj = ResourceManager.GetObject("Nen1", resourceCulture);
+                object obj = ResourceManager.GetObject("Dang_Nhap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,109 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PLAY {
+        internal static System.Drawing.Bitmap Forgot_Pass {
             get {
-                object obj = ResourceManager.GetObject("PLAY", resourceCulture);
+                object obj = ResourceManager.GetObject("Forgot_Pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GameMode {
+            get {
+                object obj = ResourceManager.GetObject("GameMode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GM_Back {
+            get {
+                object obj = ResourceManager.GetObject("GM_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap His {
+            get {
+                object obj = ResourceManager.GetObject("His", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Home {
+            get {
+                object obj = ResourceManager.GetObject("Home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Matchhis {
+            get {
+                object obj = ResourceManager.GetObject("Matchhis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nen_Chinh {
+            get {
+                object obj = ResourceManager.GetObject("Nen_Chinh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Play {
+            get {
+                object obj = ResourceManager.GetObject("Play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Play_Online {
+            get {
+                object obj = ResourceManager.GetObject("Play_Online", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Play_W_Player {
+            get {
+                object obj = ResourceManager.GetObject("Play_W_Player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Play_With_Comp {
+            get {
+                object obj = ResourceManager.GetObject("Play_With_Comp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +243,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RANKINGS {
+        internal static System.Drawing.Bitmap Profile_Main {
             get {
-                object obj = ResourceManager.GetObject("RANKINGS", resourceCulture);
+                object obj = ResourceManager.GetObject("Profile_Main", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +253,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap REWARDS {
+        internal static System.Drawing.Bitmap Ranks {
             get {
-                object obj = ResourceManager.GetObject("REWARDS", resourceCulture);
+                object obj = ResourceManager.GetObject("Ranks", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +263,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2025_11_12_184112 {
+        internal static System.Drawing.Bitmap Ranks1 {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2025-11-12 184112", resourceCulture);
+                object obj = ResourceManager.GetObject("Ranks1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +273,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2025_11_12_184249 {
+        internal static System.Drawing.Bitmap Rewards {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2025-11-12 184249", resourceCulture);
+                object obj = ResourceManager.GetObject("Rewards", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +283,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2025_11_12_184333 {
+        internal static System.Drawing.Bitmap Screenshot_2025_12_22_231241 {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2025-11-12 184333", resourceCulture);
+                object obj = ResourceManager.GetObject("Screenshot 2025-12-22 231241", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +293,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2025_11_12_184357 {
+        internal static System.Drawing.Bitmap Screenshot_2025_12_26_115858 {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2025-11-12 184357", resourceCulture);
+                object obj = ResourceManager.GetObject("Screenshot 2025-12-26 115858", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +303,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2025_11_12_184900 {
+        internal static System.Drawing.Bitmap Sign_In {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2025-11-12 184900", resourceCulture);
+                object obj = ResourceManager.GetObject("Sign_In", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +313,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2025_11_12_192530 {
+        internal static System.Drawing.Bitmap Sign_In1 {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2025-11-12 192530", resourceCulture);
+                object obj = ResourceManager.GetObject("Sign_In1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +323,9 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2025_11_12_200341 {
+        internal static System.Drawing.Bitmap Sign_Up {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2025-11-12 200341", resourceCulture);
+                object obj = ResourceManager.GetObject("Sign_Up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +333,19 @@ namespace Co_Vay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tran_Ca_Nhan {
+        internal static System.Drawing.Bitmap Trang_Chu {
             get {
-                object obj = ResourceManager.GetObject("Tran_Ca_Nhan", resourceCulture);
+                object obj = ResourceManager.GetObject("Trang_Chu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Trang_Chu1 {
+            get {
+                object obj = ResourceManager.GetObject("Trang_Chu1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
