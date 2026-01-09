@@ -1,60 +1,81 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Co_Vay
 {
     public partial class Quen_Mat_Khau : Form
     {
-        private readonly RealtimeDatabaseService dbService = new RealtimeDatabaseService();
+        // Dịch vụ Firebase dùng để gửi email reset password
         private readonly FirebaseService firebaseService = new FirebaseService();
+
+        // Giữ lại form đăng nhập để quay về
         private Dang_Nhap DangNhapForm;
+
         public Quen_Mat_Khau(Dang_Nhap formDangNhap)
         {
             InitializeComponent();
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             DangNhapForm = formDangNhap;
         }
 
+        // Khi nhấn nút "Xác nhận" → gửi email đặt lại mật khẩu
         private async void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            string username = txt_Username.Text.Trim();
-            string email = txt_Email.Text.Trim();
+            string email = txt_Email.Text.Trim(); // Lấy email người dùng nhập
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email))
+            // Kiểm tra người dùng có nhập hay không
+            if (string.IsNullOrEmpty(email))
             {
-                MessageBox.Show("Vui lòng nhập đủ Username và Email!", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter your email address!",
+                                "Missing Information",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra định dạng email hợp lệ bằng Regex
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Invalid email! Please enter a valid format (e.g., example@gmail.com)",
+                                "Invalid Format",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                 return;
             }
 
             try
             {
-                // Lấy email từ Firebase theo username
-                string storedEmail = await dbService.GetEmailByUsernameAsync(username);
-
-                if (storedEmail == null)
-                {
-                    MessageBox.Show("Tên người dùng không tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (!storedEmail.Equals(email, StringComparison.OrdinalIgnoreCase))
-                {
-                    MessageBox.Show("Email không khớp với Username.", "Sai thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
+                // Gửi email đặt lại mật khẩu qua Firebase
                 await firebaseService.ResetPasswordAsync(email);
-                MessageBox.Show($"✅ Đã gửi email đặt lại mật khẩu tới {email}.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBox.Show($"✅ A password reset email has been sent to: {email}.",
+                                "Success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi gửi email: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Bắt lỗi khi gửi email thất bại
+                MessageBox.Show("Error while sending password reset email: " + ex.Message,
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
 
+        // Hàm kiểm tra định dạng email hợp lệ bằng biểu thức chính quy
+        private bool IsValidEmail(string email)
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$"; // Pattern kiểm tra email
+            return Regex.IsMatch(email, pattern);
+        }
+
+        // Khi nhấn nút Back → đóng form quên mật khẩu và quay lại form đăng nhập
         private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Close();
             DangNhapForm.Show();
-        }
+        }        
     }
 }
