@@ -28,27 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
             btn_Back = new Button();
             txb_Password2 = new TextBox();
-            label4 = new Label();
             txb_Password1 = new TextBox();
-            label3 = new Label();
             textBox1 = new TextBox();
-            label1 = new Label();
             btn_XacNhan = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.Nen1;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1241, 846);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // btn_Back
             // 
@@ -64,90 +51,73 @@
             // 
             // txb_Password2
             // 
-            txb_Password2.Font = new Font("Comic Sans MS", 12F);
-            txb_Password2.Location = new Point(375, 352);
+            txb_Password2.BorderStyle = BorderStyle.None;
+            txb_Password2.Font = new Font("Arial", 16F);
+            txb_Password2.Location = new Point(360, 502);
             txb_Password2.Name = "txb_Password2";
             txb_Password2.PasswordChar = '*';
-            txb_Password2.Size = new Size(500, 41);
+            txb_Password2.Size = new Size(711, 37);
             txb_Password2.TabIndex = 13;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Comic Sans MS", 14F, FontStyle.Bold);
-            label4.Location = new Point(375, 300);
-            label4.Name = "label4";
-            label4.Size = new Size(295, 39);
-            label4.TabIndex = 12;
-            label4.Text = "Enter New Password";
             // 
             // txb_Password1
             // 
-            txb_Password1.Font = new Font("Comic Sans MS", 12F);
-            txb_Password1.Location = new Point(375, 225);
+            txb_Password1.BorderStyle = BorderStyle.None;
+            txb_Password1.Font = new Font("Arial", 16F);
+            txb_Password1.Location = new Point(360, 359);
             txb_Password1.Name = "txb_Password1";
             txb_Password1.PasswordChar = '*';
-            txb_Password1.Size = new Size(500, 41);
+            txb_Password1.Size = new Size(711, 37);
             txb_Password1.TabIndex = 11;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Comic Sans MS", 14F, FontStyle.Bold);
-            label3.Location = new Point(375, 171);
-            label3.Name = "label3";
-            label3.Size = new Size(295, 39);
-            label3.TabIndex = 10;
-            label3.Text = "Enter Last Password";
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("Comic Sans MS", 12F);
-            textBox1.Location = new Point(375, 464);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Arial", 16F);
+            textBox1.Location = new Point(360, 644);
             textBox1.Name = "textBox1";
             textBox1.PasswordChar = '*';
-            textBox1.Size = new Size(500, 41);
+            textBox1.Size = new Size(711, 37);
             textBox1.TabIndex = 15;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Comic Sans MS", 14F, FontStyle.Bold);
-            label1.Location = new Point(375, 412);
-            label1.Name = "label1";
-            label1.Size = new Size(345, 39);
-            label1.TabIndex = 14;
-            label1.Text = "Re-enter New Password";
             // 
             // btn_XacNhan
             // 
-            btn_XacNhan.BackColor = Color.White;
-            btn_XacNhan.Font = new Font("Comic Sans MS", 20F, FontStyle.Bold);
-            btn_XacNhan.Location = new Point(448, 546);
+            btn_XacNhan.BackColor = Color.FromArgb(255, 211, 144);
+            btn_XacNhan.FlatAppearance.BorderSize = 0;
+            btn_XacNhan.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 211, 144);
+            btn_XacNhan.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 211, 144);
+            btn_XacNhan.FlatStyle = FlatStyle.Flat;
+            btn_XacNhan.Font = new Font("Arial", 35F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_XacNhan.ForeColor = Color.FromArgb(255, 116, 65);
+            btn_XacNhan.Location = new Point(479, 834);
             btn_XacNhan.Name = "btn_XacNhan";
-            btn_XacNhan.Size = new Size(361, 125);
+            btn_XacNhan.Size = new Size(481, 105);
             btn_XacNhan.TabIndex = 16;
-            btn_XacNhan.Text = "CHANGE PASSWORD";
+            btn_XacNhan.Text = "CONFIRM";
             btn_XacNhan.UseVisualStyleBackColor = false;
             btn_XacNhan.Click += btn_XacNhan_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.Screenshot_2025_12_22_231241;
+            pictureBox1.Image = Properties.Resources.Screenshot_2025_12_22_231241;
+            pictureBox1.Location = new Point(399, 100);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(630, 96);
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
             // 
             // Change_Password
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1240, 844);
+            BackgroundImage = Properties.Resources.Change_Pass;
+            ClientSize = new Size(1438, 1024);
+            Controls.Add(pictureBox1);
             Controls.Add(btn_XacNhan);
             Controls.Add(textBox1);
-            Controls.Add(label1);
             Controls.Add(txb_Password2);
-            Controls.Add(label4);
             Controls.Add(txb_Password1);
-            Controls.Add(label3);
             Controls.Add(btn_Back);
-            Controls.Add(pictureBox1);
             Name = "Change_Password";
             Text = "Change_Password";
             Load += Change_Password_Load;
@@ -157,15 +127,11 @@
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private Button btn_Back;
         private TextBox txb_Password2;
-        private Label label4;
         private TextBox txb_Password1;
-        private Label label3;
         private TextBox textBox1;
-        private Label label1;
         private Button btn_XacNhan;
+        private PictureBox pictureBox1;
     }
 }

@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\ndphu\Documents\UIT\NT106.Q11\Co_Vay\Co_Vay\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Update="Change_Email.cs">
       <SubType>Form</SubType>
@@ -13,7 +16,52 @@
     <Compile Update="Dang_Nhap.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Form_Draw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Lose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Match_Making.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Result_Player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Win.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GameMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Game_Mode_Online.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Match_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Rankings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Match_Setting_Player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Match_Setting_Comp.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Man_Hinh_Chinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Mode_Online.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Mode_W_Comp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Mode_W_Player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Online_Privatematch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PasswordPrompt.cs">
@@ -23,6 +71,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Quen_Mat_Khau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reward.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Trang_Chu.cs">

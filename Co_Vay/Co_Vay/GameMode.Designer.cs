@@ -28,92 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
             btn_GM_Back = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            btn_W_Comp = new Button();
+            btn_W_Player = new Button();
+            btn_Online = new Button();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.game_mode;
-            pictureBox1.Location = new Point(-5, -2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1498, 1003);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // btn_GM_Back
             // 
             btn_GM_Back.FlatAppearance.BorderSize = 0;
             btn_GM_Back.FlatStyle = FlatStyle.Flat;
-            btn_GM_Back.Image = Properties.Resources.gmback;
-            btn_GM_Back.Location = new Point(2, 837);
+            btn_GM_Back.Image = Properties.Resources.GM_Back;
+            btn_GM_Back.Location = new Point(485, 713);
             btn_GM_Back.Name = "btn_GM_Back";
-            btn_GM_Back.Size = new Size(305, 130);
+            btn_GM_Back.Size = new Size(456, 134);
             btn_GM_Back.TabIndex = 1;
             btn_GM_Back.UseVisualStyleBackColor = true;
             btn_GM_Back.Click += btn_GM_Back_Click;
             // 
-            // button1
+            // btn_W_Comp
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = Properties.Resources.playcomp;
-            button1.Location = new Point(233, 244);
-            button1.Name = "button1";
-            button1.Size = new Size(1106, 193);
-            button1.TabIndex = 2;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_W_Comp.FlatAppearance.BorderSize = 0;
+            btn_W_Comp.FlatStyle = FlatStyle.Flat;
+            btn_W_Comp.Image = Properties.Resources.Play_With_Comp;
+            btn_W_Comp.Location = new Point(302, 297);
+            btn_W_Comp.Name = "btn_W_Comp";
+            btn_W_Comp.Size = new Size(834, 144);
+            btn_W_Comp.TabIndex = 2;
+            btn_W_Comp.UseVisualStyleBackColor = true;
+            btn_W_Comp.Click += btn_W_Comp_Click;
             // 
-            // button2
+            // btn_W_Player
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = Properties.Resources.playp;
-            button2.Location = new Point(247, 443);
-            button2.Name = "button2";
-            button2.Size = new Size(1056, 174);
-            button2.TabIndex = 3;
-            button2.UseVisualStyleBackColor = true;
+            btn_W_Player.FlatAppearance.BorderSize = 0;
+            btn_W_Player.FlatStyle = FlatStyle.Flat;
+            btn_W_Player.Image = Properties.Resources.Play_W_Player;
+            btn_W_Player.Location = new Point(305, 445);
+            btn_W_Player.Name = "btn_W_Player";
+            btn_W_Player.Size = new Size(828, 130);
+            btn_W_Player.TabIndex = 3;
+            btn_W_Player.UseVisualStyleBackColor = true;
+            btn_W_Player.Click += btn_W_Player_Click;
             // 
-            // button3
+            // btn_Online
             // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Image = Properties.Resources.Playonl;
-            button3.Location = new Point(246, 625);
-            button3.Name = "button3";
-            button3.Size = new Size(1056, 174);
-            button3.TabIndex = 4;
-            button3.UseVisualStyleBackColor = true;
+            btn_Online.FlatAppearance.BorderSize = 0;
+            btn_Online.FlatStyle = FlatStyle.Flat;
+            btn_Online.Image = Properties.Resources.Play_Online;
+            btn_Online.Location = new Point(304, 574);
+            btn_Online.Name = "btn_Online";
+            btn_Online.Size = new Size(831, 135);
+            btn_Online.TabIndex = 4;
+            btn_Online.UseVisualStyleBackColor = true;
+            btn_Online.Click += btn_Online_Click;
             // 
             // GameMode
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1492, 995);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            BackgroundImage = Properties.Resources.GameMode;
+            ClientSize = new Size(1438, 1024);
+            Controls.Add(btn_Online);
+            Controls.Add(btn_W_Player);
+            Controls.Add(btn_W_Comp);
             Controls.Add(btn_GM_Back);
-            Controls.Add(pictureBox1);
             Name = "GameMode";
             Text = "GameMode";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private Button btn_GM_Back;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btn_W_Comp;
+        private Button btn_W_Player;
+        private Button btn_Online;
     }
 }

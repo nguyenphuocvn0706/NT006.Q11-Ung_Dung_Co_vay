@@ -30,64 +30,59 @@
         {
             btn_XacNhan2 = new Button();
             txt_nEmail = new TextBox();
-            label1 = new Label();
             btn_BackMail = new Button();
             SuspendLayout();
             // 
             // btn_XacNhan2
             // 
-            btn_XacNhan2.BackColor = Color.White;
-            btn_XacNhan2.Font = new Font("Comic Sans MS", 20F, FontStyle.Bold);
-            btn_XacNhan2.Location = new Point(505, 422);
+            btn_XacNhan2.BackColor = Color.FromArgb(255, 174, 144);
+            btn_XacNhan2.FlatAppearance.BorderSize = 0;
+            btn_XacNhan2.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 174, 144);
+            btn_XacNhan2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 174, 144);
+            btn_XacNhan2.FlatStyle = FlatStyle.Flat;
+            btn_XacNhan2.Font = new Font("Arial", 25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_XacNhan2.ForeColor = Color.FromArgb(255, 255, 255);
+            btn_XacNhan2.Location = new Point(466, 550);
             btn_XacNhan2.Name = "btn_XacNhan2";
-            btn_XacNhan2.Size = new Size(360, 100);
+            btn_XacNhan2.Size = new Size(500, 105);
             btn_XacNhan2.TabIndex = 22;
-            btn_XacNhan2.Text = "CHANGE EMAIL";
+            btn_XacNhan2.Text = "CHANG EMAIL";
             btn_XacNhan2.UseVisualStyleBackColor = false;
-            // 👉 Gắn lại đúng sự kiện duy nhất:
+            btn_XacNhan2.Click += btn_XacNhan2_Click;
             // 
             // txt_nEmail
             // 
-            txt_nEmail.Font = new Font("Comic Sans MS", 12F);
-            txt_nEmail.Location = new Point(432, 340);
+            txt_nEmail.BorderStyle = BorderStyle.None;
+            txt_nEmail.Font = new Font("Arial", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_nEmail.Location = new Point(360, 430);
             txt_nEmail.Name = "txt_nEmail";
-            txt_nEmail.Size = new Size(500, 41);
+            txt_nEmail.Size = new Size(621, 37);
             txt_nEmail.TabIndex = 21;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Comic Sans MS", 14F, FontStyle.Bold);
-            label1.Location = new Point(432, 288);
-            label1.Name = "label1";
-            label1.Size = new Size(244, 39);
-            label1.TabIndex = 20;
-            label1.Text = "Enter New Email";
             // 
             // btn_BackMail
             // 
             btn_BackMail.BackColor = Color.White;
-            btn_BackMail.Font = new Font("Comic Sans MS", 16F, FontStyle.Bold);
+            btn_BackMail.Font = new Font("Arial", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_BackMail.Location = new Point(36, 20);
             btn_BackMail.Name = "btn_BackMail";
             btn_BackMail.Size = new Size(120, 60);
             btn_BackMail.TabIndex = 17;
             btn_BackMail.Text = "Back";
             btn_BackMail.UseVisualStyleBackColor = false;
+            btn_BackMail.Click += btn_BackMail_Click;
             // 
             // Change_Email
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Nen;
-            ClientSize = new Size(1363, 842);
-            Controls.Add(btn_XacNhan2);
+            BackgroundImage = Properties.Resources.Change_Email;
+            ClientSize = new Size(1438, 1024);
             Controls.Add(txt_nEmail);
-            Controls.Add(label1);
             Controls.Add(btn_BackMail);
+            Controls.Add(btn_XacNhan2);
             Name = "Change_Email";
             Text = "Change_Email";
+            Load += Change_Email_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -96,7 +91,6 @@
 
         private Button btn_XacNhan2;
         private TextBox txt_nEmail;
-        private Label label1;
         private Button btn_BackMail;
     }
 }

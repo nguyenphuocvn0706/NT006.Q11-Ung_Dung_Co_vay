@@ -17,7 +17,6 @@
 
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
             txt_Name = new TextBox();
             txt_Sex = new ComboBox();
             txt_Date = new DateTimePicker();
@@ -26,131 +25,123 @@
             btn_Change_Info = new Button();
             btn_Delete_Info = new Button();
             btn_Back = new Button();
-            btn_Log_Out = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Tran_Ca_Nhan;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1521, 1004);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // txt_Name
             // 
-            txt_Name.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_Name.Location = new Point(786, 128);
+            txt_Name.Font = new Font("Arial", 14F);
+            txt_Name.Location = new Point(311, 510);
             txt_Name.Multiline = true;
             txt_Name.Name = "txt_Name";
-            txt_Name.Size = new Size(614, 56);
+            txt_Name.Size = new Size(297, 44);
             txt_Name.TabIndex = 1;
             // 
             // txt_Sex
             // 
             txt_Sex.DropDownStyle = ComboBoxStyle.DropDownList;
-            txt_Sex.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_Sex.Font = new Font("Arial", 14F);
             txt_Sex.Items.AddRange(new object[] { "Male", "Female", "Other" });
-            txt_Sex.Location = new Point(786, 271);
+            txt_Sex.Location = new Point(311, 608);
             txt_Sex.Name = "txt_Sex";
-            txt_Sex.Size = new Size(614, 41);
+            txt_Sex.Size = new Size(297, 40);
             txt_Sex.TabIndex = 2;
-            txt_Sex.SelectedIndexChanged += txt_Sex_SelectedIndexChanged;
             // 
             // txt_Date
             // 
             txt_Date.CustomFormat = "dd/MM/yyyy";
-            txt_Date.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_Date.Font = new Font("Arial", 14F);
             txt_Date.Format = DateTimePickerFormat.Custom;
-            txt_Date.Location = new Point(786, 404);
+            txt_Date.Location = new Point(311, 711);
             txt_Date.Name = "txt_Date";
-            txt_Date.Size = new Size(614, 40);
+            txt_Date.Size = new Size(297, 40);
             txt_Date.TabIndex = 3;
             // 
             // btn_Chang_Password
             // 
+            btn_Chang_Password.BackColor = Color.FromArgb(255, 156, 124);
             btn_Chang_Password.FlatAppearance.BorderSize = 0;
+            btn_Chang_Password.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 156, 124);
+            btn_Chang_Password.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 156, 124);
             btn_Chang_Password.FlatStyle = FlatStyle.Flat;
-            btn_Chang_Password.Image = Properties.Resources.Screenshot_2025_11_12_184112;
-            btn_Chang_Password.Location = new Point(359, 539);
+            btn_Chang_Password.Font = new Font("Arial", 35F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Chang_Password.ForeColor = Color.FromArgb(255, 255, 255);
+            btn_Chang_Password.Location = new Point(656, 192);
             btn_Chang_Password.Name = "btn_Chang_Password";
-            btn_Chang_Password.Size = new Size(576, 196);
+            btn_Chang_Password.Size = new Size(480, 170);
             btn_Chang_Password.TabIndex = 4;
-            btn_Chang_Password.UseVisualStyleBackColor = true;
+            btn_Chang_Password.Text = "CHANG PASSWORD";
+            btn_Chang_Password.UseVisualStyleBackColor = false;
             btn_Chang_Password.Click += btn_Chang_Password_Click;
             // 
             // btn_Chang_Email
             // 
+            btn_Chang_Email.BackColor = Color.FromArgb(255, 156, 124);
             btn_Chang_Email.FlatAppearance.BorderSize = 0;
+            btn_Chang_Email.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 156, 124);
+            btn_Chang_Email.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 156, 124);
             btn_Chang_Email.FlatStyle = FlatStyle.Flat;
-            btn_Chang_Email.Image = Properties.Resources.Screenshot_2025_11_12_184249;
-            btn_Chang_Email.Location = new Point(367, 746);
+            btn_Chang_Email.Font = new Font("Arial", 25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Chang_Email.ForeColor = Color.FromArgb(255, 255, 255);
+            btn_Chang_Email.Location = new Point(656, 417);
             btn_Chang_Email.Name = "btn_Chang_Email";
-            btn_Chang_Email.Size = new Size(568, 194);
+            btn_Chang_Email.Size = new Size(476, 107);
             btn_Chang_Email.TabIndex = 5;
+            btn_Chang_Email.Text = "CHANGE EMAIL";
             btn_Chang_Email.UseVisualStyleBackColor = true;
             btn_Chang_Email.Click += btn_Chang_Email_Click;
             // 
             // btn_Change_Info
             // 
+            btn_Change_Info.BackColor = Color.FromArgb(255, 198, 162);
             btn_Change_Info.FlatAppearance.BorderSize = 0;
+            btn_Change_Info.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 198, 162);
+            btn_Change_Info.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 198, 162);
             btn_Change_Info.FlatStyle = FlatStyle.Flat;
-            btn_Change_Info.Image = Properties.Resources.Screenshot_2025_11_12_184333;
-            btn_Change_Info.Location = new Point(940, 542);
+            btn_Change_Info.Font = new Font("Arial", 25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Change_Info.ForeColor = Color.FromArgb(255, 255, 255);
+            btn_Change_Info.Location = new Point(656, 581);
             btn_Change_Info.Name = "btn_Change_Info";
-            btn_Change_Info.Size = new Size(568, 194);
+            btn_Change_Info.Size = new Size(476, 105);
             btn_Change_Info.TabIndex = 6;
-            btn_Change_Info.UseVisualStyleBackColor = true;
+            btn_Change_Info.Text = "CHANGE INFO";
+            btn_Change_Info.UseVisualStyleBackColor = false;
             btn_Change_Info.Click += btn_Change_Info_Click;
             // 
             // btn_Delete_Info
             // 
+            btn_Delete_Info.BackColor = Color.FromArgb(254, 238, 238);
             btn_Delete_Info.FlatAppearance.BorderSize = 0;
+            btn_Delete_Info.FlatAppearance.MouseDownBackColor = Color.FromArgb(254, 238, 238);
+            btn_Delete_Info.FlatAppearance.MouseOverBackColor = Color.FromArgb(254, 238, 238);
             btn_Delete_Info.FlatStyle = FlatStyle.Flat;
-            btn_Delete_Info.Image = Properties.Resources.Screenshot_2025_11_12_184357;
-            btn_Delete_Info.Location = new Point(941, 743);
+            btn_Delete_Info.Font = new Font("Arial", 25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Delete_Info.ForeColor = Color.FromArgb(244, 134, 105);
+            btn_Delete_Info.Location = new Point(648, 728);
             btn_Delete_Info.Name = "btn_Delete_Info";
-            btn_Delete_Info.Size = new Size(568, 194);
+            btn_Delete_Info.Size = new Size(488, 111);
             btn_Delete_Info.TabIndex = 7;
-            btn_Delete_Info.UseVisualStyleBackColor = true;
+            btn_Delete_Info.Text = "DELETE INFO";
+            btn_Delete_Info.UseVisualStyleBackColor = false;
             btn_Delete_Info.Click += btn_Delete_Info_Click;
             // 
             // btn_Back
             // 
             btn_Back.FlatAppearance.BorderSize = 0;
-            btn_Back.FlatStyle = FlatStyle.Flat;
-            btn_Back.Image = Properties.Resources.Screenshot_2025_11_12_184900;
-            btn_Back.Location = new Point(30, 805);
+            btn_Back.Font = new Font("Arial", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Back.Location = new Point(24, 934);
             btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(254, 183);
+            btn_Back.Size = new Size(180, 56);
             btn_Back.TabIndex = 8;
+            btn_Back.Text = "BACK";
             btn_Back.UseVisualStyleBackColor = true;
             btn_Back.Click += btn_Back_Click;
-            // 
-            // btn_Log_Out
-            // 
-            btn_Log_Out.FlatAppearance.BorderSize = 0;
-            btn_Log_Out.FlatStyle = FlatStyle.Flat;
-            btn_Log_Out.Font = new Font("Times New Roman", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_Log_Out.ForeColor = SystemColors.ControlLightLight;
-            btn_Log_Out.Image = Properties.Resources.Desktop___2__4_;
-            btn_Log_Out.Location = new Point(107, 425);
-            btn_Log_Out.Name = "btn_Log_Out";
-            btn_Log_Out.Size = new Size(253, 86);
-            btn_Log_Out.TabIndex = 9;
-            btn_Log_Out.Text = "LOG OUT";
-            btn_Log_Out.UseVisualStyleBackColor = true;
-            btn_Log_Out.Click += btn_Log_Out_Click;
             // 
             // Profile
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1521, 1000);
-            Controls.Add(btn_Log_Out);
+            BackgroundImage = Properties.Resources.Profile_Main;
+            ClientSize = new Size(1438, 1024);
             Controls.Add(btn_Back);
             Controls.Add(btn_Delete_Info);
             Controls.Add(btn_Change_Info);
@@ -159,17 +150,13 @@
             Controls.Add(txt_Date);
             Controls.Add(txt_Sex);
             Controls.Add(txt_Name);
-            Controls.Add(pictureBox1);
             Name = "Profile";
             Text = "Profile";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private TextBox txt_Name;
         private ComboBox txt_Sex;
         private DateTimePicker txt_Date;
@@ -178,6 +165,5 @@
         private Button btn_Change_Info;
         private Button btn_Delete_Info;
         private Button btn_Back;
-        private Button btn_Log_Out;
     }
 }

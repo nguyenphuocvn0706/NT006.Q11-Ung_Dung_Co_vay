@@ -1,3 +1,5 @@
+﻿using System.Drawing.Drawing2D;
+
 namespace Co_Vay
 {
     public partial class Trang_Chu : Form
@@ -5,6 +7,7 @@ namespace Co_Vay
         public Trang_Chu()
         {
             InitializeComponent();
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void btn_DangNhap1_Click(object sender, EventArgs e)

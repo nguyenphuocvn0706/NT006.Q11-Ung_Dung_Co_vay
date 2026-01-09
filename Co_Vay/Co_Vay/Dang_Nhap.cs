@@ -11,22 +11,23 @@ namespace Co_Vay
         public Dang_Nhap(Trang_Chu formTrangChu)
         {
             InitializeComponent();
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             trangChuForm = formTrangChu;
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            // 🔹 Quay lại trang chủ
+            // Quay lại trang chủ
             this.Close();
             trangChuForm.Show();
         }
 
         private async void btn_DangNhap2_Click(object sender, EventArgs e)
         {
-            string username = txb_Username.Text.Trim();  // 🔹 Lấy username người dùng nhập
-            string password = txb_Password.Text.Trim();  // 🔹 Lấy mật khẩu người dùng nhập
+            string username = txb_Username.Text.Trim();  // Lấy username người dùng nhập
+            string password = txb_Password.Text.Trim();  // Lấy mật khẩu người dùng nhập
 
-            // 🔹 Kiểm tra ô nhập trống
+            // Kiểm tra ô nhập trống
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please enter both username and password!",
@@ -36,7 +37,7 @@ namespace Co_Vay
 
             try
             {
-                // 🔹 Lấy email tương ứng với username trong Realtime Database
+                // Lấy email tương ứng với username trong Realtime Database
                 var db = new RealtimeDatabaseService();
                 string email = await db.GetEmailByUsernameAsync(username);
 
@@ -47,11 +48,11 @@ namespace Co_Vay
                     return;
                 }
 
-                // 🔹 Đăng nhập Firebase bằng email và mật khẩu
+                // Đăng nhập Firebase bằng email và mật khẩu
                 var firebase = new FirebaseService();
                 var auth = await firebase.LoginAsync(email, password);
 
-                // 🔹 Kiểm tra xem email đã được xác minh hay chưa
+                // Kiểm tra xem email đã được xác minh hay chưa
                 if (!auth.User.Info.IsEmailVerified)
                 {
                     MessageBox.Show("Your email address is not verified yet! Please check your inbox and verify it before logging in.",
@@ -59,26 +60,26 @@ namespace Co_Vay
                     return;
                 }
 
-                // 🔹 Đăng nhập thành công
+                // Đăng nhập thành công
                 MessageBox.Show("✅ Login successful!",
                                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // 🔹 Mở màn hình chính sau khi đăng nhập thành công
+                // Mở màn hình chính sau khi đăng nhập thành công
                 Man_Hinh_Chinh mainForm = new Man_Hinh_Chinh(firebase.AuthClient);
                 mainForm.Show();
 
-                // 🔹 Ẩn form đăng nhập để không bị chồng lên
+                // Ẩn form đăng nhập để không bị chồng lên
                 this.Hide();
             }
             catch (Firebase.Auth.FirebaseAuthException)
             {
-                // 🔹 Lỗi đăng nhập Firebase (sai mật khẩu hoặc tài khoản không tồn tại)
+                // Lỗi đăng nhập Firebase (sai mật khẩu hoặc tài khoản không tồn tại)
                 MessageBox.Show("Incorrect username or password!",
                                 "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // 🔹 Các lỗi khác (mất mạng, Firebase lỗi, v.v.)
+                // Các lỗi khác (mất mạng, Firebase lỗi, v.v.)
                 MessageBox.Show("Login error: " + ex.Message,
                                 "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -86,15 +87,10 @@ namespace Co_Vay
 
         private void btn_Quen_mat_khau_Click(object sender, EventArgs e)
         {
-            // 🔹 Mở form quên mật khẩu và ẩn form đăng nhập
+            // Mở form quên mật khẩu và ẩn form đăng nhập
             Quen_Mat_Khau f = new Quen_Mat_Khau(this);
             f.Show();
             this.Hide();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            // 🔹 Sự kiện click hình ảnh (nếu cần dùng sau)
         }
     }
 }

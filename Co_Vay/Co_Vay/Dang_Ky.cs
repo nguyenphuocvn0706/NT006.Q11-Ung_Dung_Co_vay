@@ -16,17 +16,18 @@ namespace Co_Vay
         public Dang_Ky(Trang_Chu formTrangChu)
         {
             InitializeComponent();
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             trangChuForm = formTrangChu;
         }
 
         private async void btn_DangKy_Click(object sender, EventArgs e)
         {
-            string username = txb_Username.Text.Trim();  // 🔹 Tên đăng nhập
-            string email = txt_Email.Text.Trim();        // 🔹 Email người dùng
-            string password = txb_Password1.Text.Trim(); // 🔹 Mật khẩu
-            string confirm = txb_Password2.Text.Trim();  // 🔹 Nhập lại mật khẩu
+            string username = txb_Username.Text.Trim();  // Tên đăng nhập
+            string email = txt_Email.Text.Trim();        // Email người dùng
+            string password = txb_Password1.Text.Trim(); // Mật khẩu
+            string confirm = txb_Password2.Text.Trim();  // Nhập lại mật khẩu
 
-            // 🔹 Kiểm tra nhập đủ thông tin
+            // Kiểm tra nhập đủ thông tin
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) ||
                 string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirm))
             {
@@ -35,7 +36,7 @@ namespace Co_Vay
                 return;
             }
 
-            // 🔹 Kiểm tra định dạng email
+            // Kiểm tra định dạng email
             if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 MessageBox.Show("Invalid email format! Please enter a valid email (e.g., example@gmail.com).",
@@ -43,7 +44,7 @@ namespace Co_Vay
                 return;
             }
 
-            // 🔹 Kiểm tra độ dài mật khẩu
+            // Kiểm tra độ dài mật khẩu
             if (password.Length < 6)
             {
                 MessageBox.Show("Password must be at least 6 characters long!",
@@ -51,7 +52,7 @@ namespace Co_Vay
                 return;
             }
 
-            // 🔹 Kiểm tra xác nhận mật khẩu
+            // Kiểm tra xác nhận mật khẩu
             if (password != confirm)
             {
                 MessageBox.Show("Password confirmation does not match!",
@@ -59,7 +60,7 @@ namespace Co_Vay
                 return;
             }
 
-            // 🔹 Xác nhận thông tin đăng ký trước khi gửi
+            // Xác nhận thông tin đăng ký trước khi gửi
             DialogResult confirmInfo = MessageBox.Show(
                 $"⚠️ Please review your registration details carefully!\n\n" +
                 $"👤 Username: {username}\n" +
@@ -72,7 +73,7 @@ namespace Co_Vay
                 MessageBoxIcon.Warning
             );
 
-            // 🔹 Nếu người dùng chọn Cancel thì hủy đăng ký
+            // Nếu người dùng chọn Cancel thì hủy đăng ký
             if (confirmInfo != DialogResult.OK)
             {
                 MessageBox.Show("Registration has been canceled.",
@@ -82,7 +83,7 @@ namespace Co_Vay
 
             try
             {
-                // 🔹 Kiểm tra username đã tồn tại trong Realtime Database chưa
+                // Kiểm tra username đã tồn tại trong Realtime Database chưa
                 var dbCheck = new RealtimeDatabaseService();
                 var existingEmail = await dbCheck.GetEmailByUsernameAsync(username);
                 if (!string.IsNullOrEmpty(existingEmail))
@@ -92,13 +93,13 @@ namespace Co_Vay
                     return;
                 }
 
-                // 🔹 Đăng ký Firebase Authentication
+                // Đăng ký Firebase Authentication
                 var firebase = new FirebaseService();
                 var auth = await firebase.RegisterAsync(email, password);
                 var user = auth.User;
                 string token = await user.GetIdTokenAsync();
 
-                // 🔹 Gửi email xác minh sau khi tạo tài khoản
+                // Gửi email xác minh sau khi tạo tài khoản
                 string apiKey = "AIzaSyB2hBtJx5MgJ8R4dlImA06yCjIf3l1zilE";
                 using (var client = new HttpClient())
                 {
@@ -115,7 +116,7 @@ namespace Co_Vay
                         content);
                 }
 
-                // 🔹 Lưu thông tin người dùng mới vào Realtime Database
+                // Lưu thông tin người dùng mới vào Realtime Database
                 var db = new RealtimeDatabaseService(token);
                 string uid = user.Uid;
                 await db.SetUserAsync(uid, new UserModel
@@ -125,17 +126,17 @@ namespace Co_Vay
                 });
                 await db.UpdateUsernameMappingAsync(username, email);
 
-                // 🔹 Thông báo gửi email xác minh
+                // Thông báo gửi email xác minh
                 MessageBox.Show("📩 Verification email has been sent! Please check your inbox and confirm.",
                                 "Email Verification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // 🔹 Quay lại màn hình chính
+                // Quay lại màn hình chính
                 this.Close();
                 trangChuForm.Show();
             }
             catch (Exception ex)
             {
-                // 🔹 Xử lý các lỗi phổ biến của Firebase
+                // Xử lý các lỗi phổ biến của Firebase
                 if (ex.Message.Contains("EMAIL_EXISTS"))
                     MessageBox.Show("This email is already in use! Please choose another one.",
                                     "Duplicate Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -153,11 +154,9 @@ namespace Co_Vay
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            // 🔹 Khi nhấn Back → đóng form đăng ký và quay lại trang chủ
+            // Khi nhấn Back → đóng form đăng ký và quay lại trang chủ
             this.Close();
             trangChuForm.Show();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e) { }
     }
 }
